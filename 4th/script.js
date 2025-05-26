@@ -1,12 +1,17 @@
+let cardImageElement = null;
+
 function main() {
-    let confirm = document.getElementById('mainResult').innerHTML;
+    const mainResultElement = document.getElementById('mainResult');
+    const resultElement = document.getElementById('result');
+    const btnResElement = document.getElementById('btn-res');
+    const bodyElement = document.body;
+
+    let confirm = mainResultElement.innerHTML;
     if(confirm == "You are lost..!"){
         alert('Game over! Please restart the game');
     }else{
     let x;
-    do{
-    x =Math.floor(Math.random()*100/7.6)
-    }while (x == 0);
+    x = Math.floor(Math.random() * 13) + 1;
 
     let currentTT = parseInt  (document.getElementById('result').innerHTML);
     let total = currentTT + x;
